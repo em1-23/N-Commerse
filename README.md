@@ -1,6 +1,4 @@
-import base64
-
-readme_content = """# 🛒 Full-Stack E-Commerce Platform & Admin Dashboard
+# 🛒 Full-Stack E-Commerce Platform & Admin Dashboard
 
 An enterprise-grade, fully responsive **E-Commerce Application** seamlessly integrated with a powerful **Admin Dashboard**. This project demonstrates industry-standard development practices for modern React.js applications, focusing on scalable state management, real-time data synchronization, secure checkout processes, and a clean folder structure.
 
