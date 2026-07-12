@@ -1,0 +1,201 @@
+@font-face {
+  font-family: 'Cairo Black';
+  src: url(Fonts/Cairo-Black.ttf);
+}
+:root{
+  --Header-background:#004cff;
+  --Specia-Color:#e43434;
+}
+html{
+  background-color: #fff;
+  color: #101010;
+  font-family:'Cairo Black', monospace , sans-serif;
+  font-size: 13px;
+  overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+  display: none;
+}
+.Header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0px 5.8%;
+  margin: -1%;
+  margin-bottom: 0;
+  background-color: var(--Header-background);
+  position: relative;
+}
+.Header *{
+  color: white;
+}
+.Carsul{
+  mask-image: linear-gradient(to right ,transparent , #000 15% 90%  );
+  will-change: transform;
+  overflow: hidden;
+}
+.track{
+  display: flex;
+  width: max-content;
+  animation: scroll 15s linear infinite;
+  margin: 0 auto;
+}
+@keyframes scroll {
+  to{
+    transform: translateX(-50%);
+  }
+}
+.Carsol:hover .track{
+  animation-play-state: paused;
+}
+.item{
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  margin-right: 15px;
+}
+.item img{
+  width: 90px;
+  height: 90px;
+  border-radius: 15px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+.H1Logo{
+  font-size: 40px;
+}
+.List{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  gap: 5em;
+}
+.List div{
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  flex: 1 0 150px;
+}
+.List div.ProfileSection{
+  flex: .5 0 100px;
+}
+a{
+  text-decoration: none;
+  transition: all .2s ease;
+}
+a:hover{
+  color: var(--Specia-Color);
+}
+.Button{
+  border: 2px solid var(--Specia-Color);
+  padding: 2px 30px;
+  border-radius: 5px ;
+  background-color: var(--Specia-Color);
+  transition: all .4s ease;
+  font-family:'Cairo Black';
+}
+.Button *{
+  color: white;
+  text-decoration: none;
+}
+.Button:hover ,.Button.Outline{
+  background-color: transparent;
+}
+.Button.Outline:hover{
+  background-color: var(--Specia-Color);
+}
+.SearchSection{
+  background-color: #0040ff;
+  width: 90%;
+  padding: 5px 6.5%;
+  margin-left: -1%;
+}
+.Input{
+  padding: 5px 30px;
+  border: 2.5px solid var(--Specia-Color);
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+}
+.Input::placeholder{
+  color: white;
+}
+.ProductsSection{
+  display: flex;
+  width: 95%;
+  margin: 2% auto;
+  align-items: center;
+  gap: 2em;
+  justify-content: space-between;
+}
+.ProductsType{
+  background-color: #eaeaea;
+  flex: 2 0 100px;
+  padding: 3% 10px;
+  margin-top: 0%;
+  border:1px solid #9e9e9e;
+  border-radius: 5px;
+  height: 300px;
+}
+li{
+  list-style: none;
+}
+.Products{
+  flex: 5 0 70%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+    "Laptop Laptop Laptop Head"
+    "Camera Mouse Watch Watch"
+    ;
+  gap: 1em;
+}
+.Products .Card{
+  width: auto;
+  background-color: black;
+  position: relative;
+  height: 200px;
+  border-radius: 5px;
+  color: white;
+}
+.Products .Card h3{
+  position: absolute;
+  left: 2%;
+}
+.MarkName{
+  color: var(--Header-background);
+}
+.Products .Card .Description{
+  position: absolute;
+  top: 18%;
+  left: 2%;
+}
+.Products .Card .Button.Buy{
+  padding: 3px 15px;
+  background-color: #0040ff;
+  border: 2.5px solid #0040ff;
+  color: white;
+  border-radius: 2rem;
+  position: absolute;
+  top: 70%;
+  left: 2%;
+  translate: 0% -50%;
+}
+.Products .Card .Button.Buy:hover{
+  background-color: transparent;
+}
+.Products .Card img{
+  height: 60%;
+  width: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 5px;
+}
