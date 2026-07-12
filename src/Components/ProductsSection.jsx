@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { ArrayOfProducts } from '../Data/ProductsSpecial'
 function ProductsSection() {
   return (
     <div className='ProductsSection'>
@@ -15,24 +15,14 @@ function ProductsSection() {
         <li>Chargers</li>
       </div>
       <div className="Products">
-        <div className="Card" style={{gridArea:"Laptop",width:"auto",backgroundColor:"#929292"}}>
-          <img src="src/Imgs/ProductsIMGS/AlienWar.png" alt="Alien War"/>
-          <h3>Laptop <span className='MarkName'>Alien Ware</span></h3>
-          <span className="Description">Gameing Laptop</span>
-          <button className="Button Buy">Buy It</button>
-        </div>
-        <div className="Card" style={{gridArea:"Head",backgroundColor:"#bdb6b6"}}>
-          <img src="src/Imgs/ProductsIMGS/Headphones.png" alt="HeadPhones"/>
-        </div>
-        <div className="Card" style={{gridArea:"Mouse",backgroundColor:"#756c6c"}}>
-          <img src="src/Imgs/ProductsIMGS/Mouse.png" alt="Mouse"/>
-        </div>
-        <div className="Card" style={{gridArea:"Watch",backgroundColor:"#a2a2a2"}}>
-          <img src="src/Imgs/ProductsIMGS/Smart_Watch.png" alt="Smart Watch"/>
-        </div>
-        <div className="Card" style={{gridArea:"Camera",backgroundColor:"#bfcfff"}}>
-          <img src="src/Imgs/ProductsIMGS/Camera.png" alt="Camera Sony"/>
-        </div>
+        {ArrayOfProducts.map((Map)=>(
+          <div className="Card" key={Map.id} style={Map.style}>
+            <img src={Map.PhotoLink} alt={Map.Name}/>
+            <h3>{Map.Name} <span className='MarkName'>{Map.MarkName}</span></h3>
+            <span className="Description">{Map.TypeOfName}</span>
+            <button className="Button Buy">Buy It</button>
+          </div>
+        ))}
       </div>
     </div>
   )
